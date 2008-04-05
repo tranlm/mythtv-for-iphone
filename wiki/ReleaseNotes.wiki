@@ -1,7 +1,15 @@
+#summary Release Notes.
+
 = MythTV for iPhone =
-Copyright 2008 Chris Carey (http://chriscarey.com)
+Copyright 2008 Chris Carey (http://chriscarey.com). 
 This program is distributed under the terms of the GNU General Public License
 
-==============================================================================		
-Release Notes
-==============================================================================
+== Contact ==
+Contact me at *chris.carey @ gmail.com*
+or *chris @ chriscarey.com* if you need assistance.
+
+== Development Change Log ==
+
+===2008-04-05 (v0.01 release)===
+
+Initial Release
