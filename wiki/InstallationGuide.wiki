@@ -1,0 +1,12 @@
+= MythTV for iPhone =
+Copyright 2008 Chris Carey (http://chriscarey.com)
+This program is distributed under the terms of the GNU General Public License
+
+==============================================================================
+Install Guide
+==============================================================================
+
+You need to get your MythTV box creating mp4 files. I followed this guide:
+http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
+
+The script did not work for me. My MythTV is passing only one argument to the script and the script is expecting two. I will post my version of the script up here soon.
