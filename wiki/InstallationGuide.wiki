@@ -1,12 +1,57 @@
-= MythTV for iPhone =
-Copyright 2008 Chris Carey (http://chriscarey.com)
+#summary Installation Guide.
+
+
+
+===MythTV for iPhone===
+Copyright 2008 Chris Carey (http://chriscarey.com). 
 This program is distributed under the terms of the GNU General Public License
 
-==============================================================================
-Install Guide
-==============================================================================
+== Introduction ==
 
-You need to get your MythTV box creating mp4 files. I followed this guide:
-http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
+*This software is not a native iPhone app.* It is a web application which is installed on your MythTV server. You access the software by using your iPhone web browser and hitting a URL on your MythTV server. 
 
-The script did not work for me. My MythTV is passing only one argument to the script and the script is expecting two. I will post my version of the script up here soon.
+
+
+
+
+== Apache Setup ==
+
+
+
+You need to set up a /recordings/ Alias for listening to messages.
+
+In your apache conf file add:
+{{{
+Alias /recordings /var/lib/mythtv/recordings
+
+<Location /recordings>
+  Options Indexes
+</Location>
+}}}
+
+
+== Dependency Install ==
+
+  * Install Smarty on your web server. Download Smarty at: http://smarty.org or Debian based systems: *apt-get install smarty*
+  * Install php-curl. Debian based systems: *apt-get install php5-curl*
+  * Install ffmpeg and it's dependencies. You should be able to run the conversion script by hand via command-line. More info at this link http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
+
+== Install Smarty Templates in smarty templates folder ==
+
+  * templates/mythiphone/main.tpl
+
+
+==Install files in the application folder==
+
+  * mythiphone/i_db.php
+  * mythiphone/i_functions.php
+  * mythiphone/i_settings.php
+  * mythiphone/index.php
+
+==Customize i_settings.php==
+
+  * copy i_settings.php.dist to i_settings.php
+
+You must edit this file with correct paths and options
+
+== All Done!! ==
