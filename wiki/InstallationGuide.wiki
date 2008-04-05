@@ -43,11 +43,12 @@ http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
 /usr/local/bin/mythipod.sh %DIR%
 }}}
 
-2. Hack the mythipod.sh file to accept only one parameter. You should be able to test if the transcoding is working by running it on the command-line by hand and have it work.  Use it like this:
+2. Hack the mythipod.sh file to accept only one parameter. You should be able to test if the transcoding is working by running it on the command-line by hand and have it work. It should convert file.mpg into file.mpg.mp4. I run it on the command-line successfully like this:
 
 {{{
 /usr/local/bin/mythipod.sh file.mpg
 }}}
+
 
 Here is my hacked version of /usr/local/bin/mythipod.sh:
 {{{
