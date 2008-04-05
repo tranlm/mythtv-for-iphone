@@ -34,8 +34,8 @@ Alias /recordings /var/lib/mythtv/recordings
 
 == Transcoding Setup (My Way) ==
 
-Follow this guide (but change two things). The reason for this is on my MythTV I found that only one parameter was being sent to the UserJob. This howto assumes that two parameters are being sent to the UserJob. So my little hack basically allows the script to work with one parameter. I dont know if my MythTV is just weird, or if the howto is out of date:
-http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
+Follow this guide http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone (but change two things). The reason for this is on my MythTV I found that only one parameter was being sent to the UserJob. This howto assumes that two parameters are being sent to the UserJob. So my little hack basically allows the script to work with one parameter. I dont know if my MythTV is just weird, or if the howto is out of date.
+
 
 1. Change the UserJob1 to this:
 
