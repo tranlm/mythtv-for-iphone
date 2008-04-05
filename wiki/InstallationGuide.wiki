@@ -30,6 +30,17 @@ Alias /recordings /var/lib/mythtv/recordings
   * Install php-curl. Debian based systems: *apt-get install php5-curl*
   * Install ffmpeg and it's dependencies. You should be able to run the conversion script by hand via command-line. More info at this link http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
 
+== Transcoding Setup ==
+
+I followed this guide:
+http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
+
+Which for the most part is good, but I had to hack the mythipod.sh file so that it worked on my server. You should be able to run this file on the command line by hand and have it work. The command line with my script has one parameter which is the file to be transcoded. Use it like this:
+
+{{{
+/usr/local/bin/mythipod.sh file.mpg
+}}}
+
 Here is my hacked version of /usr/local/bin/mythipod.sh:
 {{{
 #!/bin/bash
