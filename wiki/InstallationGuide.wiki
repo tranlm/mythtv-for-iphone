@@ -10,15 +10,9 @@ This program is distributed under the terms of the GNU General Public License
 
 *This software is not a native iPhone app.* It is a web application which is installed on your MythTV server. You access the software by using your iPhone web browser and hitting a URL on your MythTV server. 
 
-
-
-
-
 == Apache Setup ==
 
-
-
-You need to set up a /recordings/ Alias for listening to messages.
+You need to set up a /recordings/ Alias for watching videos.
 
 In your apache conf file add:
 {{{
