@@ -23,6 +23,8 @@ Alias /recordings /var/lib/mythtv/recordings
 </Location>
 }}}
 
+*You must restart apache for the settings to take effect*
+
 
 == Dependency Install ==
 
