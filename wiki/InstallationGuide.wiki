@@ -30,12 +30,18 @@ Alias /recordings /var/lib/mythtv/recordings
   * Install php-curl. Debian based systems: *apt-get install php5-curl*
   * Install ffmpeg and it's dependencies. You should be able to run the conversion script by hand via command-line. More info at this link http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
 
-== Transcoding Setup ==
+== Transcoding Setup (My Way) ==
 
-I followed this guide:
+Follow this guide (but change two things):
 http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
 
-Which for the most part is good, but I had to hack the mythipod.sh file so that it worked on my server. You should be able to test if the transcoding is working by running it on the command line by hand and have it work. The command line with my script has one parameter which is the file to be transcoded. Use it like this:
+1. Change the UserJob1 to this:
+
+{{{
+/usr/local/bin/mythipod.sh %DIR%
+}}}
+
+2. Hack the mythipod.sh file to accept only one parameter. You should be able to test if the transcoding is working by running it on the command-line by hand and have it work.  Use it like this:
 
 {{{
 /usr/local/bin/mythipod.sh file.mpg
@@ -86,6 +92,12 @@ abitrate=128k
 
 ffmpeg -i "${directory}" -acodec aac -ab ${abitrate} -ac 2 -s ${width}x${height} -vcodec mpeg4 -b ${vbitrate} -flags +aic+mv4+trell -mbd 2 -cmp 2 -subcmp 2 -g 250 -maxrate 512k -bufsize 2M -title "${file}" "${directory}.mp4"
 }}}
+
+
+== Transcoding Setup (The other way) ==
+
+Follow this guide:
+http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
 
 == Install Smarty Templates in smarty templates folder ==
 
