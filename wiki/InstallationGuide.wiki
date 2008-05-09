@@ -29,7 +29,7 @@ Alias /recordings /var/lib/mythtv/recordings
 
 == Dependency Install ==
 
-  * Install Smarty on your web server. Download Smarty at: http://smarty.org or Debian based systems: *apt-get install smarty*
+  * Install Smarty on your web server. Download Smarty at: http://www.smarty.net or Debian based systems: *apt-get install smarty*
   * Install php-curl. Debian based systems: *apt-get install php5-curl*
   * Install ffmpeg and it's dependencies. You should be able to run the conversion script by hand via command-line. More info on this in the Transcoding sections below.
 
