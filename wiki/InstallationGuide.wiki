@@ -42,6 +42,11 @@ YOU MUST HAVE THIS WORKING BEFORE MYTHTV FOR IPHONE WILL WORK! Transcoding is a 
 
 You need to set up a "User Job" in MythTV. Mine is called "Convert to iPod". You can initiate this User Job from within MythFrontend, or MythWeb, or soon from within MythTV for iPhone. There is also a setting in Settings->TV->General where you can tell the MythTV to run "User Job #1" every time a show records. You may want this selected.
 
+Getting transcoding working correctly is probably the toughest part of the install.
+
+After upgrading my Ubuntu, I had to install Medibuntu to get the transcoding working. If you run Ubuntu, you probably need to do the same:
+http://chriscarey.com/wordpress/?p=26
+
 == Install Smarty Templates in smarty templates folder ==
 
   * templates/mythiphone/main.tpl
