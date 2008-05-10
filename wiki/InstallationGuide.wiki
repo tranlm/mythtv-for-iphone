@@ -33,74 +33,13 @@ Alias /recordings /var/lib/mythtv/recordings
   * Install php-curl. Debian based systems: *apt-get install php5-curl*
   * Install ffmpeg and it's dependencies. You should be able to run the conversion script by hand via command-line. More info on this in the Transcoding sections below.
 
-== Transcoding Setup (My Way) ==
+== Transcoding Setup ==
 
-Follow this guide http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone (but change two things). The reason for this is on my MythTV I found that only one parameter was being sent to the UserJob. This howto assumes that two parameters are being sent to the UserJob. So my little hack basically allows the script to work with one parameter. I dont know if my MythTV is just weird, or if the howto is out of date.
+YOU MUST HAVE THIS WORKING BEFORE MYTHTV FOR IPHONE WILL WORK! Transcoding is a huge part of this process. For the most part, you are on your own here. You need to get it to the point that the mp4 files are being generated automatically on your MythTV.
 
+You need to set up a "User Job" in MythTV. Mine is called "Convert to iPod". You can initiate this User Job from within MythFrontend, or MythWeb, or soon from within MythTV for iPhone. There is also a setting in Settings->TV->General where you can tell the MythTV to run "User Job #1" every time a show records. You may want this selected.
 
-1. Change the UserJob1 to this:
-
-{{{
-/usr/local/bin/mythipod.sh %DIR%
-}}}
-
-2. Hack the mythipod.sh file to accept only one parameter. You should be able to test if the transcoding is working by running it on the command-line by hand and have it work. It should convert file.mpg into file.mpg.mp4. I run it on the command-line successfully like this:
-
-{{{
-/usr/local/bin/mythipod.sh file.mpg
-}}}
-
-
-Here is my hacked version of /usr/local/bin/mythipod.sh:
-{{{
-#!/bin/bash
-
-#MythIPod v.1 http://www.chiefhacker.com/
-
-#Copyright 2007 Chris Lorenzo et al
-#This software is licensed under the CC-GNU LGPL <http://creativecommons.org/licenses/LGPL/2.1/>
-#Additionally modified 2007 Doug Johnson
-#Modified by Chris Carey, 2008
-
-#if [ ! $# == 2 ]; then
-#  echo "Usage: $0 directory file"
-#  exit
-#fi
-
-directory="$1";
-file="$2";
-
-#Get the video information
-video_info=`mplayer -vo null -ao null -frames 10 -identify "${directory}" 2>/dev/null`
-
-#Command line grep sucks, but we make due...
-aspect=`echo $video_info | egrep -oe "Movie-Aspect is [0-9:.]+" | egrep -o "[0-9:.]+"`
-framerate=`echo $video_info | egrep -oe "[0-9.]+ fps" | egrep -o "[0-9.]+"`
-
-# set resolution by aspect ratio
-
-if [ "$aspect" == "1.78:1" ]
-then
-  width=432
-  height=240
-  vbitrate=480k
-else
-  width=480
-  height=360
-  vbitrate=378k
-fi
-
-abitrate=128k
-
-# Create the MP4
-
-ffmpeg -i "${directory}" -acodec aac -ab ${abitrate} -ac 2 -s ${width}x${height} -vcodec mpeg4 -b ${vbitrate} -flags +aic+mv4+trell -mbd 2 -cmp 2 -subcmp 2 -g 250 -maxrate 512k -bufsize 2M -title "${file}" "${directory}.mp4"
-}}}
-
-
-== Transcoding Setup (The other way) ==
-
-Follow this guide:
+Follow this guide which is the same one I'm using:
 http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
 
 == Install Smarty Templates in smarty templates folder ==
