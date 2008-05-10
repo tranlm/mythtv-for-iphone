@@ -35,12 +35,12 @@ Alias /recordings /var/lib/mythtv/recordings
 
 == Transcoding Setup ==
 
+Follow this guide which is the same one I'm using:
+http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
+
 YOU MUST HAVE THIS WORKING BEFORE MYTHTV FOR IPHONE WILL WORK! Transcoding is a huge part of this process. For the most part, you are on your own here. You need to get it to the point that the mp4 files are being generated automatically on your MythTV.
 
 You need to set up a "User Job" in MythTV. Mine is called "Convert to iPod". You can initiate this User Job from within MythFrontend, or MythWeb, or soon from within MythTV for iPhone. There is also a setting in Settings->TV->General where you can tell the MythTV to run "User Job #1" every time a show records. You may want this selected.
-
-Follow this guide which is the same one I'm using:
-http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
 
 == Install Smarty Templates in smarty templates folder ==
 
