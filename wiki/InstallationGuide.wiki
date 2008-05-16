@@ -31,8 +31,14 @@ Alias /recordings /var/lib/mythtv/recordings
 
 == Transcoding Setup ==
 
-Follow this guide which is the same one I'm using:
+Follow this guide below which is the same one I'm using:
+
 http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
+
+Two changes I made to the mythipod.sh script to make it work:
+
+1) %DIR%/%FILE% should be %DIR% %FILE% (no slash)
+2) change libfaac to aac on the last line
 
 YOU MUST HAVE THIS WORKING BEFORE MYTHTV FOR IPHONE WILL WORK! Transcoding is a huge part of this process. For the most part, you are on your own here. You need to get it to the point that the mp4 files are being generated automatically on your MythTV.
 
