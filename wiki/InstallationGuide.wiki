@@ -43,6 +43,11 @@ Getting transcoding working correctly is probably the toughest part of the insta
 After upgrading my Ubuntu, I had to install Medibuntu to get the transcoding working. If you run Ubuntu, you probably need to do the same:
 http://chriscarey.com/wordpress/?p=26
 
+== Set up Smarty Directories ==
+
+Follow the section SETUP SMARTY DIRECTORIES in the quick start guide
+http://www.smarty.net/quick_start.php
+
 == Install Smarty Templates in smarty templates folder ==
 
   * templates/mythiphone/main.tpl
