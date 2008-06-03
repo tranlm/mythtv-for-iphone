@@ -59,7 +59,7 @@ http://www.smarty.net/quick_start.php
   * templates/mythiphone/main.tpl
 
 
-==Install files in the application folder==
+==Install files in the web app folder on your mythtv box==
 
   * mythiphone/i_db.php
   * mythiphone/i_functions.php
