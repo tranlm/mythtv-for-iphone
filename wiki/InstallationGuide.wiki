@@ -33,7 +33,7 @@ Alias /recordings /var/lib/mythtv/recordings
 
 Follow this guide below which is the same one I'm using:
 
-http://mythtv.org/wiki/index.php/Streaming_to_iPod_touch_or_iPhone
+http://mythtv.org/wiki/Streaming_to_iPod_touch_or_iPhone
 
 Two changes I made to the mythipod.sh script to make it work:
 
